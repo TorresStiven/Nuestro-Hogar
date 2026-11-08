@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Nuestro Hogar: un espacio para organizar, compartir y recordar."
+    />
+
+    <title>Nuestro Hogar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="scripts/app.js" defer></script>
+    <script src="scripts/components.js" defer></script>
+  </head>
+
+  <body>
+    <div class="background-decoration decoration-one"></div>
+    <div class="background-decoration decoration-two"></div>
+    <div class="background-decoration decoration-three"></div>
+
+    <div class="app-container">
+      <!-- Navegación principal -->
+      <div id="site-header"></div>
+
+      <main>
+        <!-- Presentación principal con acceso directo al módulo de convivencia. -->
+        <section class="welcome-section">
+          <div class="welcome-content">
+            <span class="eyebrow" id="current-date">NUESTRO ESPACIO</span>
+
+            <h1>Un lugar para<br />llamar <span>hogar.</span></h1>
+
+            <p>
+              Los pequeños momentos, los grandes planes y todo lo que
+              construimos juntos.
+            </p>
+
+            <a href="pages/convivencia.html" class="primary-button">
+              Explorar nuestro hogar <span>→</span>
+            </a>
+          </div>
+
+          <div class="welcome-decoration">
+            <div class="home-illustration-frame">
+              <span class="home-illustration" aria-hidden="true">⌂</span>
+              <div class="photo-heart">♡</div>
+            </div>
+
+            <span class="decoration-caption">
+              Nuestro lugar favorito es juntos ♡
+            </span>
+          </div>
+        </section>
+        <!-- Resumen rápido: las tareas usan datos guardados y los otros módulos aún están pendientes. -->
+        <section class="section-block">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">NUESTRO DÍA A DÍA</span>
+              <h2>Así va nuestro hogar</h2>
+            </div>
+            <span class="section-note">Un día a la vez ✨</span>
+          </div>
+
+          <div class="summary-grid">
+            <article class="summary-card glass">
+              <div class="card-icon blue-icon">☑</div>
+              <span class="card-label">Tareas pendientes</span>
+              <strong class="card-number" id="pending-tasks-count" aria-live="polite">0</strong>
+              <span class="card-description" id="pending-tasks-description">Tareas pendientes en Convivencia</span>
+            </article>
+
+            <article class="summary-card glass">
+              <div class="card-icon beige-icon">🛒</div>
+              <span class="card-label">Lista de compras</span>
+              <strong class="card-number">—</strong>
+              <span class="card-description">Módulo en preparación</span>
+            </article>
+
+            <article class="summary-card glass">
+              <div class="card-icon peach-icon">♡</div>
+              <span class="card-label">Próxima fecha especial</span>
+              <strong class="card-number">—</strong>
+              <span class="card-description">Módulo en preparación</span>
+            </article>
+          </div>
+        </section>
+
+        <!-- Atajos para entrar a los dos módulos disponibles en esta versión. -->
+        <section class="section-block">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">PARA COMPARTIR</span>
+              <h2>¿Qué hacemos hoy?</h2>
+            </div>
+          </div>
+
+          <div class="quick-access-grid">
+            <a href="pages/convivencia.html" class="quick-card glass">
+              <div class="quick-card-icon">🏡</div>
+              <div>
+                <h3>Nuestra convivencia</h3>
+                <p>Organicemos juntos las pequeñas tareas del hogar.</p>
+              </div>
+              <span class="card-arrow">↗</span>
+            </a>
+
+            <a href="pages/instantes.html" class="quick-card glass">
+              <div class="quick-card-icon">📸</div>
+              <div>
+                <h3>Nuestros instantes</h3>
+                <p>Un espacio para guardar esos recuerdos especiales.</p>
+              </div>
+              <span class="card-arrow">↗</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- Cierre visual de la portada con una frase relacionada con el propósito del proyecto. -->
+        <section class="message-card glass">
+          <span class="message-heart">♡</span>
+          <div>
+            <span class="eyebrow">UN RECORDATORIO</span>
+            <p>
+              "El hogar no es solamente un lugar, también son las personas con
+              quienes elegimos construirlo."
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Hecho con cariño ♡</span>
+        <span>Nuestro Hogar · 2026</span>
+      </footer>
+    </div>
+  </body>
+</html>
