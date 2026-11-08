@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Guardemos juntos nuestros recuerdos y momentos especiales."
+    />
+
+    <title>Nuestros Instantes | Nuestro Hogar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/main.css" />
+
+    <script src="../scripts/storage.js" defer></script>
+    <script src="../scripts/moments.js" defer></script>
+    <script src="../scripts/components.js" defer></script>
+  </head>
+  <body>
+    <div class="background-decoration decoration-one"></div>
+    <div class="background-decoration decoration-two"></div>
+    <div class="background-decoration decoration-three"></div>
+
+    <div class="app-container">
+      <div id="site-header"></div>
+
+      <main class="moments-container">
+        <!-- Encabezado del álbum y cantidad de recuerdos guardados. -->
+        <section class="moments-header">
+          <div>
+            <span class="eyebrow">NUESTRA HISTORIA</span>
+            <h1>Nuestros Instantes <span>♡</span></h1>
+            <p>
+              Pequeños momentos que merecen quedarse con nosotros para siempre.
+            </p>
+          </div>
+
+          <div class="moments-counter">
+            <span id="totalMoments">0</span>
+            <small>recuerdos guardados</small>
+          </div>
+        </section>
+
+        <!-- Texto introductorio que explica el objetivo de esta página. -->
+        <section class="memory-intro">
+          <div>
+            <span class="intro-icon">✧</span>
+            <h2>Una historia hecha de momentos</h2>
+            <p>
+              Aquí guardamos esas fotografías, experiencias y pequeños detalles
+              que hacen especial nuestro hogar.
+            </p>
+          </div>
+        </section>
+
+        <!-- El formulario valida la imagen y guarda el recuerdo mediante moments.js y storage.js. -->
+        <section class="memory-form-section">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">GUARDA UN MOMENTO</span>
+              <h2>Agregar un recuerdo</h2>
+            </div>
+          </div>
+
+          <form id="memoryForm" class="memory-form">
+            <div class="photo-upload-area">
+              <label for="memoryPhoto" class="photo-upload-label">
+                <span class="upload-icon">＋</span>
+                <strong>Seleccionar fotografía</strong>
+                <small>JPG, PNG o WEBP</small>
+              </label>
+
+              <input
+                type="file"
+                id="memoryPhoto"
+                accept="image/jpeg,image/png,image/webp"
+                required
+              />
+
+              <div id="photoPreview" class="photo-preview hidden">
+                <img id="previewImage" src="" alt="Vista previa" />
+                <button type="button" id="removePreview">
+                  Quitar fotografía
+                </button>
+              </div>
+            </div>
+
+            <div class="memory-fields">
+              <label for="memoryTitle">Título del recuerdo</label>
+              <input
+                type="text"
+                id="memoryTitle"
+                placeholder="Ej. Una tarde especial..."
+                maxlength="70"
+                required
+              />
+
+              <label for="memoryDescription">¿Qué queremos recordar?</label>
+              <textarea
+                id="memoryDescription"
+                placeholder="Cuéntanos qué hizo especial este momento..."
+                rows="4"
+                maxlength="300"
+              ></textarea>
+
+              <label for="memoryDate">Fecha del recuerdo</label>
+              <input type="date" id="memoryDate" required />
+
+              <button type="submit" class="primary-button">
+                Guardar recuerdo ♡
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!-- La galería se completa dinámicamente con los registros del almacenamiento local. -->
+        <section class="gallery-section">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">NUESTRO ÁLBUM</span>
+              <h2>Momentos para recordar</h2>
+            </div>
+          </div>
+
+          <div id="memoryGallery" class="memory-gallery">
+            <div class="gallery-empty">
+              <span>♡</span>
+              <h3>Nuestro álbum comienza aquí</h3>
+              <p>Agrega esa primera fotografía que quieras conservar.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Hecho con cariño ♡</span>
+        <span>Nuestro Hogar · 2026</span>
+      </footer>
+    </div>
+  </body>
+</html>
