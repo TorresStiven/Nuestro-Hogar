@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Organicemos juntos nuestro hogar." />
+
+    <title>Convivencia | Nuestro Hogar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../styles/main.css" />
+    <script src="../scripts/tasks.js" defer></script>
+    <script src="../scripts/components.js" defer></script>
+  </head>
+
+  <body>
+    <div class="background-decoration decoration-one"></div>
+    <div class="background-decoration decoration-two"></div>
+    <div class="background-decoration decoration-three"></div>
+
+    <div class="app-container">
+      <div id="site-header"></div>
+
+      <main>
+        <!-- Presenta el propósito del módulo antes de mostrar los datos de las tareas. -->
+        <section class="module-header">
+          <div>
+            <span class="eyebrow">NUESTRO DÍA A DÍA</span>
+            <h1>Construyamos juntos <span>nuestro hogar.</span></h1>
+            <p>
+              Cada pequeño aporte cuenta. Organicemos nuestras tareas con cariño
+              y equilibrio.
+            </p>
+          </div>
+
+          <div class="module-decoration">♡</div>
+        </section>
+
+        <!-- Los indicadores se actualizan desde tasks.js usando las tareas guardadas. -->
+        <section class="task-stats">
+          <article class="stat-card glass">
+            <span class="stat-icon">📋</span>
+            <div>
+              <span class="stat-label">Tareas pendientes</span>
+              <strong id="pending-count">0</strong>
+            </div>
+          </article>
+
+          <article class="stat-card glass">
+            <span class="stat-icon">✓</span>
+            <div>
+              <span class="stat-label">Tareas completadas</span>
+              <strong id="completed-count">0</strong>
+            </div>
+          </article>
+
+          <article class="stat-card glass">
+            <span class="stat-icon">⭐</span>
+            <div>
+              <span class="stat-label">Puntos acumulados</span>
+              <strong id="total-points">0</strong>
+            </div>
+          </article>
+        </section>
+
+        <!-- Los puntos sirven como referencia del esfuerzo completado, no como competencia. -->
+        <section class="section-block">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">APORTES COMPARTIDOS</span>
+              <h2>Nuestro equilibrio</h2>
+            </div>
+            <span class="section-note">El esfuerzo de todos cuenta ♡</span>
+          </div>
+
+          <div class="balance-grid">
+            <article class="balance-card glass">
+              <div class="balance-avatar">S</div>
+              <div class="balance-info">
+                <span>Stiven</span>
+                <strong id="stiven-points">0 puntos</strong>
+              </div>
+            </article>
+
+            <article class="balance-card glass">
+              <div class="balance-avatar ana-avatar">A</div>
+              <div class="balance-info">
+                <span>Ana</span>
+                <strong id="ana-points">0 puntos</strong>
+              </div>
+            </article>
+          </div>
+          <p class="balance-note">
+            Los puntos representan el esfuerzo registrado, no una competencia.
+          </p>
+        </section>
+
+        <!-- Formulario y lista forman el flujo principal para organizar las tareas del hogar. -->
+        <section class="section-block">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">ORGANIZACIÓN DEL HOGAR</span>
+              <h2>Nuestras tareas</h2>
+            </div>
+          </div>
+
+          <div class="task-layout">
+            <!-- Desde aquí se crea cada tarea y se asigna a una persona. -->
+            <aside class="task-form-card glass">
+              <h3>Agregar una tarea</h3>
+              <p class="form-description">
+                Una pequeña acción también construye hogar.
+              </p>
+
+              <form id="task-form">
+                <div class="form-group">
+                  <label for="task-title">¿Qué debemos hacer?</label>
+                  <input
+                    type="text"
+                    id="task-title"
+                    placeholder="Ej. Organizar la cocina"
+                    maxlength="80"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="task-assignee">¿Quién se encarga?</label>
+                  <select id="task-assignee" required>
+                    <option value="Stiven">Stiven</option>
+                    <option value="Ana">Ana</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="task-points">Esfuerzo de la tarea</label>
+                  <select id="task-points" required>
+                    <option value="1">1 punto · Muy sencillo</option>
+                    <option value="2">2 puntos · Sencillo</option>
+                    <option value="3" selected>3 puntos · Moderado</option>
+                    <option value="4">4 puntos · Exigente</option>
+                    <option value="5">5 puntos · Mayor esfuerzo</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="task-date">Fecha límite</label>
+                  <input type="date" id="task-date" />
+                </div>
+
+                <button type="submit" class="primary-button form-submit">
+                  + Agregar tarea
+                </button>
+              </form>
+            </aside>
+
+            <!-- La lista se genera desde JavaScript y permite filtrar o completar tareas. -->
+            <div class="task-list-card glass">
+              <div class="task-list-heading">
+                <div>
+                  <h3>Actividades del hogar</h3>
+                  <span id="task-list-description">
+                    Tus tareas aparecerán aquí.
+                  </span>
+                </div>
+
+                <select id="task-filter" class="task-filter">
+                  <option value="all">Todas</option>
+                  <option value="pending">Pendientes</option>
+                  <option value="completed">Completadas</option>
+                </select>
+              </div>
+
+              <div id="task-list" class="task-list">
+                <div class="empty-state">
+                  <span>🏡</span>
+                  <h3>Comencemos juntos</h3>
+                  <p>
+                    Todavía no hay tareas. Agreguemos nuestra primera actividad.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Idea para una mejora futura; todavía no tiene una interacción implementada. -->
+        <section class="roulette-card glass">
+          <div class="roulette-icon">🎲</div>
+          <div>
+            <span class="eyebrow">UN POCO DE DIVERSIÓN</span>
+            <h2>¿Quién se encarga hoy?</h2>
+            <p>
+              Más adelante podremos utilizar nuestra ruleta para distribuir
+              tareas de manera equilibrada.
+            </p>
+          </div>
+          <span class="coming-soon">PRÓXIMAMENTE</span>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Hecho con cariño ♡</span>
+        <span>Nuestro Hogar · 2026</span>
+      </footer>
+    </div>
+  </body>
+</html>
