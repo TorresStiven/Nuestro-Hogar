@@ -30,7 +30,7 @@ sincronización ni colaboración en tiempo real.
 | `scripts/tasks.js` | Gestiona tareas, filtros, indicadores y puntos. |
 | `scripts/moments.js` | Gestiona el formulario, la galería y las acciones de recuerdos. |
 | `scripts/storage.js` | Encapsula el almacenamiento de recuerdos e imágenes. |
-| `assets/images/` | Carpeta para recursos visuales; no contiene fotos personales versionadas. |
+| `assets/images/` | Recursos visuales de la interfaz, incluida la foto de portada. |
 | `docs/` | Visión, arquitectura, funcionalidades e historial del proyecto. |
 
 ## Persistencia
@@ -66,8 +66,8 @@ navegador restringe alguna capacidad al usar `file://`.
 
 La información puede perderse al limpiar los datos del sitio o cambiar de
 navegador o dispositivo. No existe una copia central ni mecanismos de respaldo.
-La fotografía personal utilizada durante el desarrollo se mantiene fuera de Git
-mediante `.gitignore`; la portada utiliza una ilustración sin imagen personal.
+La fotografía usada en la portada se encuentra versionada y visible en el
+repositorio público.
 
 ## Arquitectura futura
 

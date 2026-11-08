@@ -25,3 +25,8 @@ desarrollo web.
 
 Las fechas de este historial identifican entregas del proyecto, no garantizan
 que cada funcionalidad se haya desarrollado en un solo día.
+
+## 0.1.1 — Fotografía en la portada (2026-11-08)
+
+- Se restauró la fotografía del hogar en la portada.
+- Se agregó la imagen de portada al repositorio público.

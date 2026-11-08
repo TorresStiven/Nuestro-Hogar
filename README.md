@@ -32,6 +32,7 @@ No se requiere instalar dependencias ni ejecutar un proceso de compilación.
 Nuestro Hogar/
 ├── assets/
 │   └── images/
+│       ├── foto-pareja.jpg
 │       └── README.md
 ├── docs/
 ├── pages/
@@ -60,8 +61,8 @@ para ver el alcance de la versión actual.
 Los datos se guardan localmente en el navegador. Borrar los datos del sitio o
 cambiar de navegador o dispositivo puede hacer que dejen de estar disponibles.
 La aplicación todavía no tiene cuentas, backend ni sincronización compartida.
-La fotografía personal usada durante el desarrollo se excluye del repositorio;
-la portada utiliza una ilustración para no publicar imágenes privadas.
+La fotografía de portada se incluye en el repositorio público, por lo que puede
+ser vista y descargada por otras personas.
 
 La visión del producto, su arquitectura y los cambios planeados se describen en
 la carpeta [`docs/`](docs/).
