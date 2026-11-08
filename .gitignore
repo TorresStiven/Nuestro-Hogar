@@ -1,0 +1,21 @@
+# Dependencias y salidas de herramientas
+node_modules/
+dist/
+build/
+
+# Archivos locales y temporales
+.env
+.env.*
+!.env.example
+*.log
+*.tmp
+
+# Archivos del sistema operativo y editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Fotografía personal mantenida solo en el equipo local
+assets/images/foto-pareja.jpg
