@@ -47,6 +47,21 @@ Consulta [`docs/ARQUITECTURA.md`](docs/ARQUITECTURA.md) para conocer las
 responsabilidades de cada archivo y [`docs/FUNCIONALIDADES.md`](docs/FUNCIONALIDADES.md)
 para ver el alcance de la versión actual.
 
+## Vistas del proyecto
+
+| Inicio | Convivencia | Instantes (mockup) |
+| --- | --- | --- |
+| <img src="docs/screenshots/inicio.png" alt="Vista de la página de inicio" width="260"> | <img src="docs/screenshots/convivencia.png" alt="Vista de la página de convivencia" width="260"> | <img src="docs/screenshots/instantes-mockup.png" alt="Diseño de referencia de Nuestros Instantes" width="260"> |
+
+La vista de Instantes es un mockup de referencia; las otras dos imágenes muestran
+la aplicación. En [`docs/screenshots/`](docs/screenshots/) se pueden abrir a
+tamaño completo.
+
+## Manual de uso
+
+Consulta el [manual de uso](docs/MANUAL-DE-USO.md) para aprender a crear tareas,
+guardar recuerdos y entender dónde se conserva la información.
+
 ## Tecnologías
 
 - HTML5 para la estructura.
